@@ -8,7 +8,7 @@ az network public-ip create --name AVX-CONTROLLER --allocation-method Static --r
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-CONTROLLER --private-ip-address 10.0.0.4
 az vm image list --all --publisher Aviatrix --output table
 az vm image terms accept --urn aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:5.13.6
-az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_DS3_v2 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:5.13.6 --admin-username "<username>" --admin-password "<password>" --boot-diagnostics-storage avxbootdiag --no-wait
+az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_D4S_v3 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:5.13.6 --admin-username "<username>" --admin-password "<password>" --boot-diagnostics-storage avxbootdiag3 --no-wait
 </pre>
 
 ### Copilot launch
@@ -20,6 +20,7 @@ az network public-ip create --name AVX-COPILOT --allocation-method Static --reso
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-COPILOT --private-ip-address 10.0.0.5
 az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_DS3_v2 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4 --admin-username <admin user> --admin-password <password> --boot-diagnostics-storage avxbootdiag2 --no-wait
 </pre>
+
 ### Step by step process to launch an Aviatrix controller using Azure CLI
 
 1.	Create a resource group
