@@ -12,13 +12,14 @@ az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CON
 </pre>
 
 ### Copilot launch
+<pre lang= >
 az vm image list --all --publisher Aviatrix --output table
 az vm image terms accept --urn aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4
 az storage account create -n avxbootdiag2 -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
 az network public-ip create --name AVX-COPILOT --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-COPILOT --private-ip-address 10.0.0.5
 az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_DS3_v2 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4 --admin-username <admin user> --admin-password <password> --boot-diagnostics-storage avxbootdiag2 --no-wait
-
+</pre>
 ### Step by step process to launch an Aviatrix controller using Azure CLI
 
 1.	Create a resource group
