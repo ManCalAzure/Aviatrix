@@ -1,6 +1,6 @@
-#### Quick one liner to create a service principar with contributor access for onboarding an Azure account into Aviatrix
+#### Quick one liner to create a service principal with contributor access for onboarding an Azure account into Aviatrix
 
 <pre lang= >
-az ad sp create-for-rbac --name paccar-na-aks --role="Contributor" --scopes="/subscriptions/<subscription id>
+az ad sp create-for-rbac --name <give it a name> --role="Contributor" --scopes="/subscriptions/<subscription id>
 </pre>
 
