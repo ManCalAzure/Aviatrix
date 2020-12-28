@@ -1,4 +1,4 @@
-### All code together:
+### AZ CLI for BYOL:
 <pre lang= >
 az group create --name RG-AVX-CONTROLLER --location eastus --output table
 az storage account create -n avxbootdiag -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
