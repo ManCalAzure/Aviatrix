@@ -7,8 +7,8 @@ az network vnet subnet create --vnet-name VNET-AVX-CONTROLLER --name SUB1 --reso
 az network public-ip create --name AVX-CONTROLLER --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-CONTROLLER --private-ip-address 10.0.0.4
 az vm image list --all --publisher Aviatrix --output table
-az vm image terms accept --urn aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:5.13.6
-az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_D4S_v3 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:5.13.6 --admin-username "<username>" --admin-password "<password>" --boot-diagnostics-storage avxbootdiag3 --no-wait
+az vm image terms accept --urn aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:6.2.1
+az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_D4S_v3 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:6.2.1 --admin-username "<username>" --admin-password "<password>" --boot-diagnostics-storage avxbootdiag3 --no-wait
 </pre>
 
 ### Copilot launch
