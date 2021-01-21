@@ -18,7 +18,7 @@ az vm image terms accept --urn aviatrix-systems:aviatrix-copilot:avx-cplt-byol-0
 az storage account create -n avxcopilotstor -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
 az network public-ip create --name AVX-COPILOT --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-COPILOT --private-ip-address 10.0.0.5
-az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_D4S_v3 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4 --admin-username ADD-USERNAME-HERE --admin-password ADD-A-PASSWORD-HERE --boot-diagnostics-storage avxcopilotstor--no-wait
+az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_D4S_v3 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.7 --admin-username ADD-USERNAME-HERE --admin-password ADD-A-PASSWORD-HERE --boot-diagnostics-storage avxcopilotstor--no-wait
 </pre>
 
 ### Step by step process to launch an Aviatrix controller using Azure CLI
