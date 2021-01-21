@@ -1,24 +1,24 @@
 ### AZ CLI for BYOL:
 <pre lang= >
 az group create --name RG-AVX-CONTROLLER --location eastus --output table
-az storage account create -n avxbootdiag -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
+az storage account create -n avxcontrollerstor -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
 az network vnet create --name VNET-AVX-CONTROLLER --resource-group RG-AVX-CONTROLLER --location eastus --address-prefix 10.0.0.0/24
 az network vnet subnet create --vnet-name VNET-AVX-CONTROLLER --name SUB1 --resource-group RG-AVX-CONTROLLER --address-prefixes 10.0.0.0/24 --output table
 az network public-ip create --name AVX-CONTROLLER --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-CONTROLLER --private-ip-address 10.0.0.4
 az vm image list --all --publisher Aviatrix --output table
 az vm image terms accept --urn aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:6.2.1
-az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_D4S_v3 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:6.2.1 --admin-username "<username>" --admin-password "<password>" --boot-diagnostics-storage avxbootdiag --no-wait
+az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CONTROLLER --size Standard_D4S_v3 --nics AVX-CONTROLLER-eth0 --image aviatrix-systems:aviatrix-bundle-payg:aviatrix-enterprise-bundle-byol:6.2.1 --admin-username ADD-USERNAME-HERE --admin-password ADD-A-PASSWORD-HERE --boot-diagnostics-storage avxcontrollerstor --no-wait
 </pre>
 
 ### Copilot launch
 <pre lang= >
 az vm image list --all --publisher Aviatrix --output table
 az vm image terms accept --urn aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4
-az storage account create -n avxbootdiag2 -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
+az storage account create -n avxcopilotstor -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
 az network public-ip create --name AVX-COPILOT --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-COPILOT --private-ip-address 10.0.0.5
-az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_D4S_v3 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4 --admin-username <admin user> --admin-password <password> --boot-diagnostics-storage avxbootdiag2 --no-wait
+az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT --size Standard_D4S_v3 --nics AVX-COPILOT-eth0 --image aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4 --admin-username ADD-USERNAME-HERE --admin-password ADD-A-PASSWORD-HERE --boot-diagnostics-storage avxcopilotstor--no-wait
 </pre>
 
 ### Step by step process to launch an Aviatrix controller using Azure CLI
