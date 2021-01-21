@@ -14,7 +14,7 @@ az vm create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-CON
 ### Copilot launch
 <pre lang= >
 az vm image list --all --publisher Aviatrix --output table
-az vm image terms accept --urn aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.4
+az vm image terms accept --urn aviatrix-systems:aviatrix-copilot:avx-cplt-byol-01:1.1.7
 az storage account create -n avxcopilotstor -g RG-AVX-CONTROLLER -l eastus --sku Standard_LRS
 az network public-ip create --name AVX-COPILOT --allocation-method Static --resource-group  RG-AVX-CONTROLLER --location eastus --sku Basic
 az network nic create --resource-group RG-AVX-CONTROLLER --location eastus --name AVX-COPILOT-eth0 --vnet-name VNET-AVX-CONTROLLER --subnet SUB1 --public-ip-address  AVX-COPILOT --private-ip-address 10.0.0.5
