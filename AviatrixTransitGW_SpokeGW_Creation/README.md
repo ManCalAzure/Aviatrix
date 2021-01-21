@@ -1,5 +1,4 @@
-### Refer to my previons lab to launch an Avaitrix controller
-</b><a href="https://github.com/ManCalAzure/AzureLabs/edit/master/Aviatrix/ControllerLaunchTerraform/README.md">here</a>.<br />
+### work in progress
 
 ### Specify Aviatrix as the provider with these parameters: controller_ip, username, password, version
 <pre lang= >
