@@ -44,7 +44,7 @@ variable "firewall_username" {
 variable "firewall_attached" {
   default = ""
 }
-  
+
 variable "file_share_folder" {
   default = ""
 }
