@@ -1,9 +1,9 @@
 Work in progress...
 
 ### Topology Diagram
-#### Multi-region Hub & Spoke with Overlapping Spoke CIDRs
+#### Multi-region Hub & Spoke with Spoke Overlapping CIDRs - Aviatrix Transit Gateways in Hub VNETs, Aviatrix Spoke Gateways in the Spoke VNETs
 <table><tr><td>
-    <img src="https://github.com/ManCalAzure/Aviatrix/blob/master/AviatrixRouteServerLab/AzureDiagram.png" lt="" title="Lab Topology" width="600" height="400"  />
+    <img src="https://github.com/ManCalAzure/Aviatrix/blob/master/AviatrixRouteServerLab/Azure.png"/>
 </td></tr></table>
 
 ### Creating a Resource Group or use Existing
