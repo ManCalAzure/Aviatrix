@@ -1,5 +1,9 @@
 Work in progress...
 
+### Topology Diagram
+<table><tr><td>
+    <img src="https://github.com/ManCalAzure/Aviatrix/blob/master/AviatrixRouteServerLab/AzureDiagram.png" lt="" title="Lab Topology" width="400" height="600"  />
+</td></tr></table>
 
 ### Creating a Resource Group or use Existing
 <pre lang= >
