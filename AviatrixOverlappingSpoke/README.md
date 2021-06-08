@@ -6,6 +6,9 @@ Work in progress...
     <img src="https://github.com/ManCalAzure/Aviatrix/blob/master/AviatrixOverlappingSpoke/Azure.png"/>
 </td></tr></table>
 
+### Deploy the Aviatrix Controller in Azure
+The procedure can be found [here.](https://github.com/ManCalAzure/Aviatrix/tree/master/ControllerLaunchAzureCLI#az-cli-for-byol) This lab will only cover the Controller. Copilot I will cover in another lab.
+
 ### Creating a Resource Group or use Existing
 <pre lang= >
 az group create --name RG-RouteServer --location eastus --output table
