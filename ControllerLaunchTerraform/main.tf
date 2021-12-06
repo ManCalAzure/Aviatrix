@@ -60,7 +60,7 @@ resource "azurerm_linux_virtual_machine" "demo" {
   location            = azurerm_resource_group.demo.location
   size                = "Standard_DS3_v2"
   admin_username      = "lab-user"
-  admin_password	  = "Ahina88f!!!!"
+  admin_password	  = "<password or choice>"
   disable_password_authentication = "false"
   network_interface_ids = [
     azurerm_network_interface.demo.id,
