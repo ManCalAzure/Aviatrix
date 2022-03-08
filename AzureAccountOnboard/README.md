@@ -7,7 +7,7 @@ az ad sp create-for-rbac --name "name you want to use here" --role="Contributor"
 ### Aviatrix Custom Role
 <pre lang= >
 {
-  "Name": "Aviatrix Role
+  "Name": "Aviatrix Role"
   "IsCustom": true,
   "Description": "Aviatrix Custom role for the network and gateway services",
   "Actions": [
