@@ -36,7 +36,7 @@ az ad sp create-for-rbac --name "name you want to use here" --role="Contributor"
 
 ###  Take the information above, or download the aviatrix-role.json file attached to this repo and create the role
 <pre lang= >
-az role definition create --role-definition ~/path/to/aviatrix-role.JSON < ==== patch can be your local machine if you have Az CLI installed
+az role definition create --role-definition ~/path/to/aviatrix-role.JSON < ==== path can be your local machine if you have Az CLI installed
 <b>Example:</b>
 az role definition create --role-definition c:\Users\userx\aviatrix-role.JSON
 </pre>
