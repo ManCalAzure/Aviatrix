@@ -1,0 +1,26 @@
+{
+  "Name": "Aviatrix Role",
+  "IsCustom": true,
+  "Description": "Aviatrix Custom role for the network and gateway services",
+  "Actions": [
+    "Microsoft.Storage/*/read",
+    "Microsoft.Network/*/read",
+    "Microsoft.Compute/*/read",
+    "Microsoft.Compute/virtualMachines/start/action",
+    "Microsoft.Compute/virtualMachines/restart/action",
+    "Microsoft.Authorization/*/read",
+    "Microsoft.ResourceHealth/availabilityStatuses/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Insights/alertRules/*",
+    "Microsoft.Support/*"
+  ],
+    "AssignableScopes": [
+    "/subscriptions/90737ff2-3307-49c6-9fd7-7924e9b2a55d"
+	],
+	"notActions": [
+	],
+	"dataActions":[
+	],
+	"notDataActions":[
+	]
+}
